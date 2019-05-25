@@ -244,6 +244,8 @@ const int ui32Base = ADC0_BASE + ADC_SEQ + (ADC_SEQ_STEP * 0);
   (DetectorRuntime.beforeMax - 2*DetectorRuntime.currentMax + DetectorRuntime.afterMax) / 8] += 1; \
   DetectorRuntime.overTheNoise =  0;                 \
   DetectorRuntime.currentMax = 0;                   \
+  DetectorRuntime.afterMax = 0;                   \
+  DetectorRuntime.beforeMax = 0;                   \
 }                                   \
 if (X > DetectorConfig.noiseLevel) {                  \
     if (X > DetectorRuntime.currentMax) {               \
